@@ -6,16 +6,26 @@ namespace Basic_CoreProgram
     {
         static void Main(string[] args)
         {
-            Console.WriteLine("Enter the value of first number");
+            Console.WriteLine("Enter the first Number a");
             int a = Convert.ToInt32(Console.ReadLine());
-            Console.WriteLine("Enter the value of Second number");
+            Console.WriteLine("Enter the Second Number b");
             int b = Convert.ToInt32(Console.ReadLine());
-
-            int c = a;
-            int d = b;
-            
-            Console.WriteLine("After Swapping the value of first number is: " + d);
-            Console.WriteLine("After Swapping the value of Second number is: " + c);
+            Console.WriteLine("Enter the Third Number c");
+            int c = Convert.ToInt32(Console.ReadLine());
+            if (a > b && a > c)
+            {
+                Console.WriteLine("a is largest");
+            }
+            else if (c > b && c > a)
+            {
+                Console.WriteLine("c is largest");
+            }
+            else if (b > a && b > c)
+            {
+                Console.WriteLine("b is Largest");
+            }
+            else
+                Console.WriteLine("Numbers are Equal");
         }
     }   
     
