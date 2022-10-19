@@ -6,16 +6,16 @@ namespace Basic_CoreProgram
     {
         static void Main(string[] args)
         {
-            Console.WriteLine("Enter an Alphabet");
-            char alp = Convert.ToChar(Console.ReadLine());
-            if (alp == 'a' || alp == 'A' || alp == 'e' || alp == 'E' || alp == 'i' || alp == 'I' ||
-                alp == 'o' || alp == 'O' || alp == 'u' || alp == 'U')
-            {
-                Console.WriteLine("Enterd Alphabet is a VOWEL");
+            Console.WriteLine("Enter the value of first number");
+            int a = Convert.ToInt32(Console.ReadLine());
+            Console.WriteLine("Enter the value of Second number");
+            int b = Convert.ToInt32(Console.ReadLine());
 
-            }
-            else
-                Console.WriteLine("Entered Alphabet is consonant");
+            int c = a;
+            int d = b;
+            
+            Console.WriteLine("After Swapping the value of first number is: " + d);
+            Console.WriteLine("After Swapping the value of Second number is: " + c);
         }
     }   
     
