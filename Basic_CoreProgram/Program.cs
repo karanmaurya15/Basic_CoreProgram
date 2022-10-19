@@ -4,27 +4,19 @@
     {
         static void Main(string[] args)
         {
-            Console.WriteLine("Coin Flip Count");
-            double Toss = Convert.ToDouble(Console.ReadLine());
-            int Hcount = 0;
-            int Tcount = 0;
-            for (int i = 0; i < Toss; i++)
+            Console.WriteLine("Enter an year to check");
+            double year = Convert.ToDouble(Console.ReadLine());
+            if (year > 999)
             {
-                Random random = new Random();
-                int coin = random.Next(0, 2);
-                if (coin < .5)
+                if ((year % 4 == 0 && year % 100 != 0) || (year % 400 == 0))
                 {
-                    Hcount += 1;
+                    Console.WriteLine("It is a Leap Year");
                 }
                 else
-                    Tcount += 1;
+                    Console.WriteLine("Not a Leap Year");
             }
-            Console.WriteLine("Head count: " + Hcount);
-            Console.WriteLine("Tail count: " + Tcount);
-            double Hpercent = ((double)Hcount / Toss) * 100;
-            Console.WriteLine("Head percentage is: " + Hpercent);
-            double Tpercent = (((double)Tcount / Toss)) * 100;
-            Console.WriteLine("Tail percentage is: " + Tpercent);
+            else
+                Console.WriteLine("Invalid Entry");
         }   
     }
 }
