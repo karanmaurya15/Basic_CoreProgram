@@ -6,15 +6,14 @@ namespace Basic_CoreProgram
     {
         static void Main(string[] args)
         {
-            Console.WriteLine("Enter the Dividend");
-            int Dividend = Convert.ToInt32(Console.ReadLine());
-            Console.WriteLine("Enter the Divisor");
-            int Divisor = Convert.ToInt32(Console.ReadLine());
-
-            long Cal = Math.DivRem(Dividend, Divisor, out long result);
-
-            Console.WriteLine("Quotient is : " + Cal);
-            Console.WriteLine("Remainder is: " + result);
+            Console.WriteLine("Enter the Number");
+            int num = Convert.ToInt32(Console.ReadLine());
+            if (num % 2 == 0)
+            {
+                Console.WriteLine("Number is Even");
+            }
+            else
+                Console.WriteLine("Number is Odd");
         }   
     }
 }
