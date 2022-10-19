@@ -6,14 +6,17 @@ namespace Basic_CoreProgram
     {
         static void Main(string[] args)
         {
-            Console.WriteLine("Enter the Number");
-            int num = Convert.ToInt32(Console.ReadLine());
-            if (num % 2 == 0)
+            Console.WriteLine("Enter an Alphabet");
+            char alp = Convert.ToChar(Console.ReadLine());
+            if (alp == 'a' || alp == 'A' || alp == 'e' || alp == 'E' || alp == 'i' || alp == 'I' ||
+                alp == 'o' || alp == 'O' || alp == 'u' || alp == 'U')
             {
-                Console.WriteLine("Number is Even");
+                Console.WriteLine("Enterd Alphabet is a VOWEL");
+
             }
             else
-                Console.WriteLine("Number is Odd");
-        }   
-    }
-}
+                Console.WriteLine("Entered Alphabet is consonant");
+        }
+    }   
+    
+}   
