@@ -6,23 +6,21 @@ namespace Basic_CoreProgram
     {
         static void Main(string[] args)
         {
-            Console.WriteLine("Enter the value of N");
-            int N = Convert.ToInt32(Console.ReadLine());
-            double s = 0;
-            if (N > 0)
+            Console.WriteLine("Enter the Number to calculate Prime Factors:");
+            int Number = Convert.ToInt32(Console.ReadLine());
+
+            for (int i = 2; i <= Number / 2; i++)
             {
-                for (double i = 1; i <= N; i++)
+                while (Number % i == 0)
                 {
-                    double Hnum = (1 / i);
-                    s += Hnum;
-                    Console.WriteLine("The Harmonic series are as follow: " + Hnum.ToString());
-
+                    Console.WriteLine(i);
+                    Number = Number / i;
                 }
-
-                Console.WriteLine("The SUM of above series is: " + s);
             }
-            else
-                Console.WriteLine("Invalid Entry");
+            if (Number > 2)
+            {
+                Console.WriteLine(Number);
+            }
         }   
     }
 }
